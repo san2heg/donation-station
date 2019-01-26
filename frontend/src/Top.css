@@ -1,0 +1,24 @@
+.topbar-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  text-align: center;
+  font-size: 30px;
+}
+
+.navbar {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.navitem {
+  padding-left: 10px;
+  padding-right: 10px;
+  cursor: pointer;
+}

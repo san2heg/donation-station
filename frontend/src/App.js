@@ -2,37 +2,44 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import Top from './Top.jsx'
+import Top from './Top.js';
+import Main from './Main.js';
 
 class Side extends React.Component {
   render() {
     return (
-      <div>SIDE</div>
-    );
-  }
-}
-
-class Main extends React.Component {
-  render() {
-    return (
-      <div>MAIN</div>
+      <div></div>
     );
   }
 }
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {currentPage: 'home'};
+    this.handlePageChange = this.handlePageChange.bind(this);
+  }
+
+  handlePageChange(page) {
+    this.setState({
+      currentPage: page
+    });
+  }
+
   render() {
+    const currentPage = this.state.currentPage;
+
     return (
       <div id="container">
         <div className="topbar">
-          <Top />
+          <Top onPageChange={this.handlePageChange}/>
         </div>
         <div className="flex-container">
           <div className="sidebar">
-            <Side />
+            <Side page={currentPage}/>
           </div>
           <div className="content">
-            <Main />
+            <Main page={currentPage}/>
           </div>
         </div>
       </div>
