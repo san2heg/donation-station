@@ -61,6 +61,7 @@ age <- as.integer(data[[8]])
 
 #Preallocate
 score <- rep(NA, 1000)
+flips <- rep(NA, 1000)
 
 calcDonationScore <- function(gender, prevDonor, occupation, age){
         genderWeight <- 0.2
@@ -116,14 +117,25 @@ calcDonationScore <- function(gender, prevDonor, occupation, age){
         
         total <- genderWeight + prevDonorWeight + occupationWeight + ageWeight + randomWeight
         
+        if(total > 1){
+                total <- 1
+        }
+        
         return (total)
 }
 
 for(i in 1:1000){
         score[i] <- calcDonationScore(gender[i], prev_donor[i], occupation[i], age[i])
+        flips[i] <- sample(c(0,1), 
+                        size = 1, 
+                        replace = TRUE, 
+                        prob = c(1 - score[i],score[i]))
+        
 }
 
+
 #Write to CSV
-write.csv(score, file = "output.csv", quote = FALSE)
+output <- cbind(score, flips)
+write.csv(output, file = "output.csv", quote = FALSE)
 
 
