@@ -2,6 +2,9 @@ from flask import Flask, request, jsonify
 import numpy as np
 import pandas as pd 
 import matplotlib as mpl
+
+import sys
+sys.path.append("..")
 from data.preprocess import Preprocessor
 
 def create_app():
