@@ -4,6 +4,7 @@ import './App.css';
 
 import Top from './Top.js';
 import Main from './Main.js';
+import LandingPage from './LandingPage.js';
 
 class Side extends React.Component {
   render() {
@@ -12,6 +13,7 @@ class Side extends React.Component {
     );
   }
 }
+
 
 class App extends Component {
   constructor(props) {
@@ -29,10 +31,14 @@ class App extends Component {
   render() {
     const currentPage = this.state.currentPage;
 
+    if (currentPage == 'home') {
+      return <LandingPage />;
+    }
+
     return (
       <div id="container">
         <div className="topbar">
-          <Top onPageChange={this.handlePageChange}/>
+          <Top onPageChange={this.handlePageChange} page={currentPage}/>
         </div>
         <div className="flex-container">
           <div className="sidebar">
