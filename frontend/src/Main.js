@@ -378,54 +378,6 @@ class Main extends React.Component {
             Made by Rajiv Anisetti, Sanketh Hegde, Raymond Kwan, Kareem Nosseir, and Ritesh Pendekanti at Hack-A-Wish 2019!
           </p>
         </div>
-/*
-        <div>
-
-          <div className="right">
-            <img className="center" src={ require('./assets/stadistics.png') } />
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <img className="center" src={ require('./assets/stadistics.png') } />
-          </div>
-
-        
-          <div className="left">
-            <h1>Data Analysis Platform</h1>
-
-
-            <p>Our data analysis platform is designed to be extremely easy to use! Simply select a model (or default to Random Forest Classifier) and click <span className="bold italid"> Go!</span></p>
-            <p>From here, feel free to take a look at each of the prospective donors and use the <span className="italic bold"> Contact </span> button to reach out!</p>
-          
-          </div>
-
-  
-        </div> */
-        /* 
-        <div className="paragraph-box">
-
-        <img className="center" src={ require('./assets/graph.png') } />
-
-          <h1>Data Analysis Platform</h1>
-
-
-          <p>Our data analysis platform is designed to be extremely easy to use! Simply select a model (or default to Random Forest Classifier) and click <span className="bold italid"> Go!</span></p>
-          <p>From here, feel free to take a look at each of the prospective donors and use the <span className="italic bold"> Contact </span> button to reach out!</p>
-
-          <br></br>
-          <br></br>
-          <br></br>
-
-          <img className="center" src={ require('./assets/stadistics.png') } />
-
-          <h1>Insights Platform</h1>
-
-          <p></p>
-
-        </div> */
       );
     } else if (page == 'insights') {
       return (<Insights data={this.state.data}/>);
