@@ -21,7 +21,7 @@ class Top extends React.Component {
     const pageTitles = ['data', 'insights', 'how to use', 'about'];
 
     const pageElements = pageTitles.map((title) => (
-      <a key={title} className={"navitem " + (page == title ? 'active' : '')} onClick={this.handleClick.bind(this, title)}>
+      <a key={title} id={"nav-" + title.toLowerCase().replace(/\s+/g, '')} className={"navitem " + (page == title ? 'active' : '')} onClick={this.handleClick.bind(this, title)}>
         {title.toUpperCase()}
       </a>
     ));
