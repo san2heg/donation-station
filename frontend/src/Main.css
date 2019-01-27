@@ -59,20 +59,20 @@ li {
 
 .column-left {
     margin-left: 25px;
-    width: 48%;
     float: left;
+    padding: 10px;
 }
 
 .column {
     float: left;
-    width: 50%;
+    width: 45%;
+    padding:10px;
 }
 
   /* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
+.row {
+  display: flex;
+  justify-content: center;
 }
 
 .contact-btn {
@@ -85,4 +85,9 @@ li {
 
 .contact-btn:hover {
   opacity: 0.5;
+}
+
+.inner {
+  max-width: 900px;
+  margin: 0 auto;
 }
