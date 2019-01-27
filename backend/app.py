@@ -22,9 +22,8 @@ def create_app():
     @app.route('/analyze')
     def analyze_data():
         pr = ProbabilisticRegressor()
-        pr.LogisticRegressor('./final_data.csv')
+        pr.RandomForestClassifier('./final_data.csv')
         return jsonify(pd.read_csv('./output.csv').to_json(orient='records'))
-        
 
 
     
