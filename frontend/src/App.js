@@ -48,9 +48,12 @@ class App extends Component {
   render() {
     const currentPage = this.state.currentPage;
     const showLanding = this.state.showLanding;
+    const style = {
+      overflow: showLanding ? 'hidden' : 'auto'
+    };
 
     return (
-      <div id="container">
+      <div style={style} id="container">
         <CSSTransition
           in={showLanding}
           timeout={1000}

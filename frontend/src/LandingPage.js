@@ -19,7 +19,7 @@ class LandingPage extends React.Component {
             START
           </a>
           <a className="landing-btn" onClick={() => {this.props.onExitLanding('how to use')}}>
-            HOW IT WORKS
+            HOW TO USE
           </a>
         </div>
       </div>
