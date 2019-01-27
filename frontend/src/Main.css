@@ -74,3 +74,15 @@ li {
     display: table;
     clear: both;
 }
+
+.contact-btn {
+  cursor: pointer;
+  font-weight: 700;
+  padding-left:10px;
+  padding-right:10px;
+  color: #537c8e;
+}
+
+.contact-btn:hover {
+  opacity: 0.5;
+}

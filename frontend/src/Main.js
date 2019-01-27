@@ -170,73 +170,76 @@ class Main extends React.Component {
         }
         return true;
       }
-    }, {
-      Header: 'Donated',
-      accessor: 'donated',
-      Cell: ({ value }) => (value == 1 ? "Yes" : "No"),
-      Filter: ({ filter, onChange }) => (
-        <select
-          onChange={event => onChange(event.target.value)}
-          style={{ width: "100%" }}
-          value={filter ? filter.value : "all"}
-        >
-          <option value="all">All</option>
-          <option value="yes">Yes</option>
-          <option value="no">No</option>
-        </select>
-      ),
-      filterMethod: (filter, row) => {
-        if (filter.value === "all") {
-          return true;
-        }
-        if (filter.value === "yes") {
-          return row[filter.id] == 1;
-        } else if (filter.value === "no") {
-          return row[filter.id] == 0;
-        }
-        return true;
-      }
-    }, {
-      Header: 'Salary',
-      accessor: 'salary',
-      filterMethod: (filter, row) => {
-        if (filter.value === "all") {
-          return true;
-        }
-        if (filter.value === "a") {
-          return row[filter.id] < 9526;
-        } else if (filter.value === "b") {
-          return row[filter.id] > 9526 && row[filter.id] < 38700;
-        } else if (filter.value === "c") {
-          return row[filter.id] >= 38701 && row[filter.id] < 82500;
-        } else if (filter.value === "d") {
-          return row[filter.id] >= 82501 && row[filter.id] < 157500;
-        } else if (filter.value === "e") {
-          return row[filter.id] >= 157501 && row[filter.id] < 200000;
-        } else if (filter.value === "f") {
-          return row[filter.id] >= 200001 && row[filter.id] < 500000;
-        } else if (filter.value === "g") {
-          return row[filter.id] > 500000;
-        }
-        return true;
-      },
-      Filter: ({ filter, onChange }) => (
-        <select
-          onChange={event => onChange(event.target.value)}
-          style={{ width: "100%" }}
-          value={filter ? filter.value : "all"}
-        >
-          <option value="all">All</option>
-          <option value="a">Less than $9,526</option>
-          <option value="b">$9,526 to $38,700</option>
-          <option value="c">$38,701 to $82,500</option>
-          <option value="d">$82,501 to $157,500</option>
-          <option value="e">$157,501 to $200,000</option>
-          <option value="f">$200,001 to $500,000</option>
-          <option value="g">More than $500,000</option>
-        </select>
-      )
-    }, {
+    },
+    // {
+    //   Header: 'Donated',
+    //   accessor: 'donated',
+    //   Cell: ({ value }) => (value == 1 ? "Yes" : "No"),
+    //   Filter: ({ filter, onChange }) => (
+    //     <select
+    //       onChange={event => onChange(event.target.value)}
+    //       style={{ width: "100%" }}
+    //       value={filter ? filter.value : "all"}
+    //     >
+    //       <option value="all">All</option>
+    //       <option value="yes">Yes</option>
+    //       <option value="no">No</option>
+    //     </select>
+    //   ),
+    //   filterMethod: (filter, row) => {
+    //     if (filter.value === "all") {
+    //       return true;
+    //     }
+    //     if (filter.value === "yes") {
+    //       return row[filter.id] == 1;
+    //     } else if (filter.value === "no") {
+    //       return row[filter.id] == 0;
+    //     }
+    //     return true;
+    //   }
+    // },
+    // {
+    //   Header: 'Salary',
+    //   accessor: 'salary',
+    //   filterMethod: (filter, row) => {
+    //     if (filter.value === "all") {
+    //       return true;
+    //     }
+    //     if (filter.value === "a") {
+    //       return row[filter.id] < 9526;
+    //     } else if (filter.value === "b") {
+    //       return row[filter.id] > 9526 && row[filter.id] < 38700;
+    //     } else if (filter.value === "c") {
+    //       return row[filter.id] >= 38701 && row[filter.id] < 82500;
+    //     } else if (filter.value === "d") {
+    //       return row[filter.id] >= 82501 && row[filter.id] < 157500;
+    //     } else if (filter.value === "e") {
+    //       return row[filter.id] >= 157501 && row[filter.id] < 200000;
+    //     } else if (filter.value === "f") {
+    //       return row[filter.id] >= 200001 && row[filter.id] < 500000;
+    //     } else if (filter.value === "g") {
+    //       return row[filter.id] > 500000;
+    //     }
+    //     return true;
+    //   },
+    //   Filter: ({ filter, onChange }) => (
+    //     <select
+    //       onChange={event => onChange(event.target.value)}
+    //       style={{ width: "100%" }}
+    //       value={filter ? filter.value : "all"}
+    //     >
+    //       <option value="all">All</option>
+    //       <option value="a">Less than $9,526</option>
+    //       <option value="b">$9,526 to $38,700</option>
+    //       <option value="c">$38,701 to $82,500</option>
+    //       <option value="d">$82,501 to $157,500</option>
+    //       <option value="e">$157,501 to $200,000</option>
+    //       <option value="f">$200,001 to $500,000</option>
+    //       <option value="g">More than $500,000</option>
+    //     </select>
+    //   )
+    // },
+    {
       Header: 'Will Donate?',
       accessor: 'prediction',
       Cell: ({ value }) => (value <= 0.33 ? "Not Likely" : value <= 0.66 ? "Moderately Likely" : "Likely"),
@@ -278,6 +281,10 @@ class Main extends React.Component {
           return {};
         }
       }
+    }, {
+      Header: 'Contact',
+      Cell: (<span><a className="contact-btn">Email</a><a className="contact-btn">Phone</a></span>),
+      filterable: false
     }];
 
     const filterMethod = (filter, row) => {
