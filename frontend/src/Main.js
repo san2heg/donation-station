@@ -15,15 +15,40 @@ class Main extends React.Component {
     this.state = {data: [], model: 'forest'};
 
     this.dataPage = this.dataPage.bind(this);
+    this.handleModelChange = this.handleModelChange.bind(this);
   }
 
   componentDidMount() {
-    axios.get('http://127.0.0.1:7000/analyze')
+    axios.get('http://127.0.0.1:7000/analyzeRF')
       .then(res => {
         console.log(res.data);
         this.setState({
-          data: JSON.parse(res.data)
+          data: JSON.parse(res.data.data)
         })
+      });
+  }
+
+  handleModelChange(e) {
+    let analyzeStr = 'analyzeRF'
+    if (e.target.value == 'forest') {
+      analyzeStr = 'analyzeRF';
+    } else if (e.target.value == 'neuralnet') {
+      analyzeStr = 'analyzeNN';
+    } else if (e.target.value == 'logreg') {
+      analyzeStr = 'analyzeLR';
+    } else if (e.target.value == 'knn') {
+      analyzeStr = 'analyzeKNN';
+    }
+
+    const newmodel = e.target.value;
+
+    axios.get('http://127.0.0.1:7000/' + analyzeStr)
+      .then(res => {
+        console.log(res.data);
+        this.setState({
+          data: JSON.parse(res.data.data),
+          model: newmodel
+        });
       });
   }
 
@@ -262,7 +287,7 @@ class Main extends React.Component {
         <div className="model-info">
           <div>Learning Model:</div>
           <select
-            onChange={event => this.setState({model: event.target.value})}
+            onChange={this.handleModelChange}
             value={this.state.model}
             className="model-item">
             <option value="forest">Random Forest</option>
