@@ -1,0 +1,22 @@
+.charts-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.chart-item {
+  max-width: 400px;
+  max-height: 250px;
+  background-color: #F5F5F5;
+  padding: 30px;
+  padding-bottom: 50px;
+  margin: 20px;
+}
+
+.chart-caption {
+  text-align: center;
+  font-weight: 700;
+  margin-top: 6px;
+  background-color: #F5F5F5;
+}

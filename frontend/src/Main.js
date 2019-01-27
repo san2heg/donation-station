@@ -241,7 +241,7 @@ class Main extends React.Component {
             style: {
               color:
                 (rowInfo.row.prediction <= 0.33 ? "red" : rowInfo.row.prediction <= 0.66 ? "orange" : "green"),
-              'font-weight': '700'
+              'fontWeight': '700'
             }
           };
         } else {
@@ -271,13 +271,13 @@ class Main extends React.Component {
       return (
         <div className='paragraph-box'>
           <h1> About </h1>
-          <p>Donation Station aims to help Make-A-Wish easily and efficiently reach out to donor and volunteer prospects. The search for donors can be bolstered by the use of machine learning 
+          <p>Donation Station aims to help Make-A-Wish easily and efficiently reach out to donor and volunteer prospects. The search for donors can be bolstered by the use of machine learning
             and data science, <span className="bold italic">but it doesn't have to be intimidating!</span> Donation Station is a simple, user friendly, and easy to use application that allows Make-A-Wish to quickly search for and
             get in contact with prospective donors and volunteers. <span className="bold italic">We handle the technical stuff, you take care of the rest!</span></p>
-            
-          <p> When given simple data on prospective donors, Donation Station outputs likelihoods of the prospects to donate based on learned tendencies in training datasets. From the main data page, 
+
+          <p> When given simple data on prospective donors, Donation Station outputs likelihoods of the prospects to donate based on learned tendencies in training datasets. From the main data page,
            <span className="bold italic"> it's easy to identify high-likelihood prospects and reach out immediately!</span> In addition, <span className="bold italic">our Insights platform allows for efficient identification of volunteers through similar means.</span> </p>
-          
+
           <br></br>
           <br></br>
           <br></br>
@@ -288,7 +288,7 @@ class Main extends React.Component {
 
           <h2 className="bold italic"> So how does the magic happen? </h2>
 
-          <p> <span className="bold italic">Donation Station operates with scalability at its forefront.</span> Behind a beautiful user interface is a data analysis engine that can accept data on an at-will basis in order to better 
+          <p> <span className="bold italic">Donation Station operates with scalability at its forefront.</span> Behind a beautiful user interface is a data analysis engine that can accept data on an at-will basis in order to better
             learn who may be a match for Make-A-Wish. By learning both intrinsic and extrinsic correlations between prospective donor attributes and propensity to donate, <span className="bold italic">Donation Station is able
             to recommend smart decisions without much user guidance, so Make-A-Wish can focus on what really matters.</span>
           </p>
@@ -301,7 +301,7 @@ class Main extends React.Component {
 
           <h1>The Technical Stuff (bleh!)</h1>
 
-          <p>We made sure to really understand the domain of data that Make-A-Wish could acquire and utilize before getting down to the machine learning. We focused on attributes such as age, occupation, 
+          <p>We made sure to really understand the domain of data that Make-A-Wish could acquire and utilize before getting down to the machine learning. We focused on attributes such as age, occupation,
             and previous donations (to name a few) to input to our models for prediction. The models we used are as follows:
           </p>
 
@@ -312,7 +312,7 @@ class Main extends React.Component {
             <li>K Nearest Neighbors (KNN)</li>
           </ul>
 
-          <p>We hope that Make-A-Wish can use our application in combination with their large data stores on prospective and previous donors to make smart decisions. We're excited to 
+          <p>We hope that Make-A-Wish can use our application in combination with their large data stores on prospective and previous donors to make smart decisions. We're excited to
             add more functionality such as <span className="bold italic">continuous data integration</span>, <span className="bold italic">a more intelligent insights platform</span>, <span className="bold italic"> and performance metrics</span> in the future.
           </p>
 
@@ -330,7 +330,7 @@ class Main extends React.Component {
         <div></div>
       );
     } else if (page == 'insights') {
-      return <Insights />;
+      return (<Insights data={this.state.data}/>);
     }
     return (
       <div>DEFAULT</div>
