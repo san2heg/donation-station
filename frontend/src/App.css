@@ -1,6 +1,11 @@
 html, body {
   margin: 0;
   height: 100%;
+  font-family: 'Thasadith', sans-serif;
+}
+
+.header {
+  font-family: 'Staatliches', cursive;
 }
 
 #root {
@@ -14,7 +19,7 @@ html, body {
 .flex-container {
   display: flex;
   justify-content: flex-start;
-  height: calc(100% - 100px);
+  min-height: calc(100% - 100px);
 }
 
 .sidebar {

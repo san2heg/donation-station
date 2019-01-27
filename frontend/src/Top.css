@@ -22,3 +22,11 @@
   padding-right: 10px;
   cursor: pointer;
 }
+
+.active {
+  background-color: #F0F0F0;
+}
+
+.navitem:not(.active):hover {
+  opacity: 0.5;
+}

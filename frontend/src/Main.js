@@ -7,19 +7,19 @@ class Main extends React.Component {
 
     if (page == 'home') {
       return (
-        <div>HOME</div>
+        <div></div>
       );
     } else if (page == 'about') {
       return (
-        <div>ABOUT</div>
+        <div></div>
       );
     } else if (page == 'how to use') {
       return (
-        <div>HOW TO USE</div>
+        <div></div>
       );
     } else if (page == 'insights') {
       return (
-        <div>INSIGHTS</div>
+        <div></div>
       );
     }
     return (
