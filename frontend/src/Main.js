@@ -65,7 +65,7 @@ class Main extends React.Component {
       accessor: 'first_name', // String-based value accessors!
       filterable: false
     }, {
-      Header: 'Last_Name',
+      Header: 'Last Name',
       accessor: 'last_name',
       filterable: false
     }, {
