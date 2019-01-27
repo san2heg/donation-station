@@ -12,7 +12,7 @@ import Insights from './Insights.js';
 class Main extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {data: [], model: 'forest'};
+    this.state = {data: [], model: 'forest', mse: 0};
 
     this.dataPage = this.dataPage.bind(this);
     this.handleModelChange = this.handleModelChange.bind(this);
@@ -23,7 +23,8 @@ class Main extends React.Component {
       .then(res => {
         console.log(res.data);
         this.setState({
-          data: JSON.parse(res.data.data)
+          data: JSON.parse(res.data.data),
+          mse: res.data.mse
         })
       });
   }
@@ -47,7 +48,8 @@ class Main extends React.Component {
         console.log(res.data);
         this.setState({
           data: JSON.parse(res.data.data),
-          model: newmodel
+          model: newmodel,
+          mse: res.data.mse
         });
       });
   }
@@ -296,7 +298,7 @@ class Main extends React.Component {
             <option value="logreg">Logistic Regression</option>
           </select>
           <div className="section-start">MSE (Mean Squared Error):</div>
-          <div>0%</div>
+          <div>{(this.state.mse*100).toFixed(2)}%</div>
         </div>
         <ReactTable filterable
                            defaultFilterMethod={filterMethod}
@@ -405,7 +407,7 @@ class Main extends React.Component {
               <h1>Insights Platform</h1>
 
 
-              <p>Our Insights Platform allows for more <span className="bold italic"> in-depth analysis</span> of the data points. Using Insights, it's<span className="bold italic"> easy to 
+              <p>Our Insights Platform allows for more <span className="bold italic"> in-depth analysis</span> of the data points. Using Insights, it's<span className="bold italic"> easy to
               analyze</span> trends between user attributes and donations. </p>
               <p>The Insights platform currently allows for analysis of previous donors and age with regard to donation propensity.</p>
             </div>
