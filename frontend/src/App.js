@@ -18,14 +18,10 @@ class Side extends React.Component {
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {currentPage: 'data', showLanding: false};
+    this.state = {currentPage: 'data', showLanding: true};
     this.handlePageChange = this.handlePageChange.bind(this);
     this.handleLandingEnter = this.handleLandingEnter.bind(this);
     this.handleLandingExit = this.handleLandingExit.bind(this);
-  }
-
-  componentDidMount() {
-    this.handleLandingEnter();
   }
 
   handlePageChange(page) {
@@ -52,7 +48,6 @@ class App extends Component {
   render() {
     const currentPage = this.state.currentPage;
     const showLanding = this.state.showLanding;
-    console.log('showLanding = ' + showLanding);
 
     return (
       <div id="container">

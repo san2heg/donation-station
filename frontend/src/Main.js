@@ -4,6 +4,8 @@ import axios from 'axios';
 import ReactTable from "react-table";
 import 'react-table/react-table.css'
 
+import Insights from './Insights.js';
+
 class Main extends React.Component {
   constructor(props) {
     super(props);
@@ -205,9 +207,9 @@ class Main extends React.Component {
         </select>
       )
     }, {
-      Header: 'Prediction',
+      Header: 'Will Donate?',
       accessor: 'prediction',
-      Cell: ({ value }) => (value == 1 ? "Will Donate" : "Will Not Donate"),
+      Cell: ({ value }) => (value <= 0.33 ? "Not Likely" : value <= 0.66 ? "Moderately Likely" : "Likely"),
       Filter: ({ filter, onChange }) => (
         <select
           onChange={event => onChange(event.target.value)}
@@ -215,18 +217,21 @@ class Main extends React.Component {
           value={filter ? filter.value : "all"}
         >
           <option value="all">All</option>
-          <option value="yes">Will Donate</option>
-          <option value="no">Will Not Donate</option>
+          <option value="a">Not Likely</option>
+          <option value="b">Moderately Likely</option>
+          <option value="c">Likely</option>
         </select>
       ),
       filterMethod: (filter, row) => {
         if (filter.value === "all") {
           return true;
         }
-        if (filter.value === "yes") {
-          return row[filter.id] == 1;
-        } else if (filter.value === "no") {
-          return row[filter.id] == 0;
+        if (filter.value === "a") {
+          return row[filter.id] >= 0 && row[filter.id] <= 0.33;
+        } else if (filter.value === "b") {
+          return row[filter.id] > 0.33 && row[filter.id] <= 0.66;
+        } else if (filter.value === "c") {
+          return row[filter.id] > 0.66 && row[filter.id] <= 1.0;
         }
         return true;
       },
@@ -235,7 +240,7 @@ class Main extends React.Component {
           return {
             style: {
               color:
-                rowInfo.row.prediction ? "green" : "red",
+                (rowInfo.row.prediction <= 0.33 ? "red" : rowInfo.row.prediction <= 0.66 ? "orange" : "green"),
               'font-weight': '700'
             }
           };
@@ -329,9 +334,7 @@ class Main extends React.Component {
         </div>
       );
     } else if (page == 'insights') {
-      return (
-        <div></div>
-      );
+      return <Insights />;
     }
     return (
       <div>DEFAULT</div>
