@@ -43,8 +43,8 @@ li {
 }
 
 .section-start {
-  margin-left: 15px;
-  margin-right: 10px;
+  margin-left: 30px;
+  margin-right: 5px;
 }
 
 
@@ -90,4 +90,8 @@ li {
 .inner {
   max-width: 900px;
   margin: 0 auto;
+}
+
+.percentage {
+  font-weight: 700;
 }
