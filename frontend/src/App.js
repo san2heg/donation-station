@@ -67,9 +67,6 @@ class App extends Component {
           <Top onLandingClick={this.handleLandingEnter} onPageChange={this.handlePageChange} page={currentPage}/>
         </div>
         <div className="flex-container">
-          <div className="sidebar">
-            <Side page={currentPage}/>
-          </div>
           <div className="content">
             <Main page={currentPage}/>
           </div>

@@ -8,6 +8,7 @@
   position: absolute;
 
   transition: top 1s ease;
+  z-index: 999;
 }
 
 .landing-item {
