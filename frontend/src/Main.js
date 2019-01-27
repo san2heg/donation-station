@@ -242,7 +242,7 @@ class Main extends React.Component {
     {
       Header: 'Will Donate?',
       accessor: 'prediction',
-      Cell: ({ value }) => (value <= 0.33 ? "Not Likely" : value <= 0.66 ? "Moderately Likely" : "Likely"),
+      Cell: ({ value }) => (value <= 0.33 ? "Not Likely" : value <= 0.75 ? "Moderately Likely" : "Likely"),
       Filter: ({ filter, onChange }) => (
         <select
           onChange={event => onChange(event.target.value)}
@@ -262,9 +262,9 @@ class Main extends React.Component {
         if (filter.value === "a") {
           return row[filter.id] >= 0 && row[filter.id] <= 0.33;
         } else if (filter.value === "b") {
-          return row[filter.id] > 0.33 && row[filter.id] <= 0.66;
+          return row[filter.id] > 0.33 && row[filter.id] <= 0.75;
         } else if (filter.value === "c") {
-          return row[filter.id] > 0.66 && row[filter.id] <= 1.0;
+          return row[filter.id] > 0.75 && row[filter.id] <= 1.0;
         }
         return true;
       },
@@ -273,7 +273,7 @@ class Main extends React.Component {
           return {
             style: {
               color:
-                (rowInfo.row.prediction <= 0.33 ? "red" : rowInfo.row.prediction <= 0.66 ? "orange" : "green"),
+                (rowInfo.row.prediction <= 0.33 ? "red" : rowInfo.row.prediction <= 0.75 ? "orange" : "green"),
               'fontWeight': '700'
             }
           };
