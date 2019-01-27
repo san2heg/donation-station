@@ -322,7 +322,11 @@ class Main extends React.Component {
       );
     } else if (page == 'how to use') {
       return (
-        <div></div>
+        <div className="paragraph-box">
+          <h1>Data Platform</h1>
+
+          <p>Our data analysis platform is designed to be extremely easy to use! Simply select a model (or default to Random Forest Classifier) and click <span className="bold italid"> Go!</span></p>
+        </div>
       );
     } else if (page == 'insights') {
       return (
