@@ -307,7 +307,7 @@ class Main extends React.Component {
           <div className="section-start">Accuracy:</div>
           <div className="percentage">{((1-this.state.mse)*100).toFixed(2)}%</div>
           <div className="section-start">MSE:</div>
-          <div className="percentage">{(this.state.mse*100).toFixed(2)}%</div>
+          <div className="percentage">{(this.state.mse).toFixed(4)}</div>
         </div>
         <ReactTable filterable
                            defaultFilterMethod={filterMethod}
