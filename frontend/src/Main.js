@@ -5,6 +5,7 @@ import ReactTable from "react-table";
 import 'react-table/react-table.css'
 
 import Insights from './Insights.js';
+import ModelPicker from './ModelPicker.js';
 
 // Models:
 // forest, knn, neuralnet, logreg
@@ -293,22 +294,7 @@ class Main extends React.Component {
 
     return (
       <div>
-        <div className="model-info">
-          <div>Learning Model:</div>
-          <select
-            onChange={this.handleModelChange}
-            value={this.state.model}
-            className="model-item">
-            <option value="forest">Random Forest</option>
-            <option value="knn">K Nearest Neighbors</option>
-            <option value="neuralnet">Neural Network</option>
-            <option value="logreg">Logistic Regression</option>
-          </select>
-          <div className="section-start">Accuracy:</div>
-          <div className="percentage">{((1-this.state.mse)*100).toFixed(2)}%</div>
-          <div className="section-start">MSE:</div>
-          <div className="percentage">{(this.state.mse).toFixed(4)}</div>
-        </div>
+        <ModelPicker handleModelChange={this.handleModelChange} model={this.state.model} mse={this.state.mse} />
         <ReactTable filterable
                            defaultFilterMethod={filterMethod}
                            defaultPageSize={25}
@@ -437,7 +423,7 @@ class Main extends React.Component {
         </div>
       );
     } else if (page == 'insights') {
-      return (<Insights data={this.state.data}/>);
+      return (<Insights data={this.state.data} mse={this.state.mse} handleModelChange={this.handleModelChange} model={this.state.model}/>);
     }
     return (
       <div>DEFAULT</div>

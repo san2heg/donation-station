@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './Insights.css';
 
+import ModelPicker from './ModelPicker.js';
+
 var BarChart = require("react-chartjs").Bar;
 var PieChart = require("react-chartjs").Pie;
 
@@ -103,14 +105,17 @@ class Insights extends React.Component {
     }
 
     return (
-      <div className="charts-container">
-        <div className="chart-item">
-          <BarChart data={chart1Data} width="400" height="250" />
-          <div className="chart-caption">Proportion of Ages who are Likely to Donate</div>
-        </div>
-        <div className="chart-item">
-          <PieChart data={chart2Data} options={piechartOptions} width="400" height="250"/>
-          <div className="chart-caption">Previous Donors' Likeliness to Donate</div>
+      <div>
+        <ModelPicker handleModelChange={this.props.handleModelChange} model={this.props.model} mse={this.props.mse} />
+        <div className="charts-container">
+          <div className="chart-item">
+            <BarChart data={chart1Data} width="400" height="250" />
+            <div className="chart-caption">Proportion of Ages who are Likely to Donate</div>
+          </div>
+          <div className="chart-item">
+            <PieChart data={chart2Data} options={piechartOptions} width="400" height="250"/>
+            <div className="chart-caption">Previous Donors' Likeliness to Donate</div>
+          </div>
         </div>
       </div>
     );
