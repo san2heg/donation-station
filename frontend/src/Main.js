@@ -282,7 +282,7 @@ class Main extends React.Component {
           <br></br>
           <br></br>
 
-          <img className="center" src={ require('./assets/stadistics.png') } />
+          <img className="center" src={ require('./assets/support.png') } />
 
           <h1> Methodology </h1>
 
@@ -297,7 +297,7 @@ class Main extends React.Component {
           <br></br>
           <br></br>
 
-          <img className="center" src={ require('./assets/graph.png') } />
+          <img className="center" src={ require('./assets/cloud-computing.png') } />
 
           <h1>The Technical Stuff (bleh!)</h1>
 
@@ -316,6 +316,13 @@ class Main extends React.Component {
             add more functionality such as <span className="bold italic">continuous data integration</span>, <span className="bold italic">a more intelligent insights platform</span>, <span className="bold italic"> and performance metrics</span> in the future.
           </p>
 
+          <br></br>
+          <br></br>
+          <br></br>
+
+          <img className="center" src={ require('./assets/computer.png') } />
+
+
           <p>
           <br></br>
           <br></br>
@@ -327,11 +334,98 @@ class Main extends React.Component {
       );
     } else if (page == 'how to use') {
       return (
+
+        <div>
+
+          <br></br><br></br>
+          <div class="row">
+            <div class="column-left">
+              <h1>Data Analysis Platform</h1>
+
+
+              <p>Our data analysis platform is designed to be extremely easy to use! Simply select a model (or default to Random Forest Classifier) and click <span className="bold italid"> Go!</span></p>
+              <p>From here, feel free to take a look at each of the prospective donors and use the <span className="italic bold"> Contact </span> button to reach out!</p>
+            </div>
+            <div class="column">
+              <br></br><br></br>
+              <img className="center" src={ require('./assets/graph.png') } />
+            </div>
+          </div>
+
+          <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+
+          <div class="row">
+            <div class="column-left">
+              <h1>Insights Platform</h1>
+
+
+              <p>Our data analysis platform is designed to be extremely easy to use! Simply select a model (or default to Random Forest Classifier) and click <span className="bold italid"> Go!</span></p>
+              <p>From here, feel free to take a look at each of the prospective donors and use the <span className="italic bold"> Contact </span> button to reach out!</p>
+            </div>
+            <div class="column">
+              <br></br><br></br>
+              <img className="center" src={ require('./assets/stadistics.png') } />
+            </div>
+          </div>
+
+          <p className="margin-left">
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <hr></hr>
+
+            Made by Rajiv Anisetti, Sanketh Hegde, Raymond Kwan, Kareem Nosseir, and Ritesh Pendekanti at Hack-A-Wish 2019!
+          </p>
+        </div>
+/*
+        <div>
+
+          <div className="right">
+            <img className="center" src={ require('./assets/stadistics.png') } />
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <img className="center" src={ require('./assets/stadistics.png') } />
+          </div>
+
+        
+          <div className="left">
+            <h1>Data Analysis Platform</h1>
+
+
+            <p>Our data analysis platform is designed to be extremely easy to use! Simply select a model (or default to Random Forest Classifier) and click <span className="bold italid"> Go!</span></p>
+            <p>From here, feel free to take a look at each of the prospective donors and use the <span className="italic bold"> Contact </span> button to reach out!</p>
+          
+          </div>
+
+  
+        </div> */
+        /* 
         <div className="paragraph-box">
-          <h1>Data Platform</h1>
+
+        <img className="center" src={ require('./assets/graph.png') } />
+
+          <h1>Data Analysis Platform</h1>
+
 
           <p>Our data analysis platform is designed to be extremely easy to use! Simply select a model (or default to Random Forest Classifier) and click <span className="bold italid"> Go!</span></p>
-        </div>
+          <p>From here, feel free to take a look at each of the prospective donors and use the <span className="italic bold"> Contact </span> button to reach out!</p>
+
+          <br></br>
+          <br></br>
+          <br></br>
+
+          <img className="center" src={ require('./assets/stadistics.png') } />
+
+          <h1>Insights Platform</h1>
+
+          <p></p>
+
+        </div> */
       );
     } else if (page == 'insights') {
       return <Insights />;

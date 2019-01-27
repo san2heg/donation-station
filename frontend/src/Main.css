@@ -26,3 +26,30 @@ li {
 .italic {
     font-style: italic;
 }
+
+.margin-left {
+    margin-left: 25px;
+}
+
+.right {
+    width: 70%;
+    float: right;
+}
+
+.column-left {
+    margin-left: 25px;
+    width: 48%;
+    float: left;
+}
+
+.column {
+    float: left;
+    width: 50%;
+}
+  
+  /* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
