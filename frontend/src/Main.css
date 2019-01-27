@@ -1,13 +1,24 @@
-<<<<<<< Updated upstream
 .ReactTable .rt-tbody .rt-td {
   text-align: center;
 }
-=======
 .paragraph-box {
     padding-left: 30px;
     padding-right: 30px;
 }
 
+p {
+    font-size: 18px;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+li {
+    font-size: 18px;
+}
 .bold {
     font-weight: bold;
 }
@@ -15,4 +26,3 @@
 .italic {
     font-style: italic;
 }
->>>>>>> Stashed changes
