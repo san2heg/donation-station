@@ -229,6 +229,19 @@ class Main extends React.Component {
           return row[filter.id] == 0;
         }
         return true;
+      },
+      getProps: (state, rowInfo) => {
+        if (rowInfo && rowInfo.row) {
+          return {
+            style: {
+              color:
+                rowInfo.row.prediction ? "green" : "red",
+              'font-weight': '700'
+            }
+          };
+        } else {
+          return {};
+        }
       }
     }];
 
