@@ -4,11 +4,13 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  font-family: 'Staatliches', cursive;
 }
 
 .title {
   text-align: center;
   font-size: 30px;
+  cursor: pointer;
 }
 
 .navbar {

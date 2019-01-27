@@ -5,7 +5,7 @@ class Main extends React.Component {
   render() {
     const page = this.props.page;
 
-    if (page == 'home') {
+    if (page == 'data') {
       return (
         <div></div>
       );

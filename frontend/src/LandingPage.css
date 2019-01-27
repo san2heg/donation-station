@@ -5,6 +5,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: absolute;
+
+  transition: top 1s ease;
 }
 
 .landing-item {
@@ -36,7 +39,7 @@
   font-size: 25px;
   color: transparent;
   line-height: 1;
-  height: 20px;
+  height: 19px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -59,4 +62,25 @@
 
 .landing-btn:hover {
   background-position: -100% 0;
+}
+
+/* SWIPE ANIMATION */
+
+.land-enter {
+  /* opacity: 0.01; */
+  transform: translateY(-100%);
+}
+.land-enter-active {
+  /* opacity: 1; */
+  transform: translateY(0%);
+  transition: all 0.5s ease;
+}
+.land-exit {
+  /* opacity: 1; */
+  transform: translateY(0%);
+}
+.land-exit-active {
+  /* opacity: 0.01; */
+  transform: translateY(-100%);
+  transition: all 0.5s ease;
 }

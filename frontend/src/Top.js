@@ -9,12 +9,16 @@ class Top extends React.Component {
   }
 
   handleClick(page, e) {
-    this.props.onPageChange(page);
+    if (page == 'home') {
+      this.props.onLandingClick();
+    } else {
+      this.props.onPageChange(page);
+    }
   }
 
   render() {
     const page = this.props.page;
-    const pageTitles = ['home', 'insights', 'how to use', 'about'];
+    const pageTitles = ['data', 'insights', 'how to use', 'about'];
 
     const pageElements = pageTitles.map((title) => (
       <a key={title} className={"navitem " + (page == title ? 'active' : '')} onClick={this.handleClick.bind(this, title)}>
@@ -24,7 +28,7 @@ class Top extends React.Component {
 
     return (
       <div className="topbar-container">
-        <div className="title">
+        <div className="title" onClick={this.handleClick.bind(this, 'home')}>
           Donation Station
         </div>
         <div className="navbar">
