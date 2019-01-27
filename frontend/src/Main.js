@@ -6,10 +6,13 @@ import 'react-table/react-table.css'
 
 import Insights from './Insights.js';
 
+// Models:
+// forest, knn, neuralnet, logreg
+
 class Main extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {data: []};
+    this.state = {data: [], model: 'forest'};
 
     this.dataPage = this.dataPage.bind(this);
   }
@@ -254,12 +257,30 @@ class Main extends React.Component {
       return String(row[filter.id]) === filter.value;
     }
 
-    return <ReactTable filterable
-                       defaultFilterMethod={filterMethod}
-                       defaultPageSize={25}
-                       className="data-table"
-                       data={this.state.data}
-                       columns={columns} />
+    return (
+      <div>
+        <div className="model-info">
+          <div>Learning Model:</div>
+          <select
+            onChange={event => this.setState({model: event.target.value})}
+            value={this.state.model}
+            className="model-item">
+            <option value="forest">Random Forest</option>
+            <option value="knn">K Nearest Neighbors</option>
+            <option value="neuralnet">Neural Network</option>
+            <option value="logreg">Logistic Regression</option>
+          </select>
+          <div className="section-start">MSE (Mean Squared Error):</div>
+          <div>0%</div>
+        </div>
+        <ReactTable filterable
+                           defaultFilterMethod={filterMethod}
+                           defaultPageSize={25}
+                           className="data-table"
+                           data={this.state.data}
+                           columns={columns} />
+      </div>
+    );
   }
 
   render() {
