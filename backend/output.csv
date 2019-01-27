@@ -1,0 +1,101 @@
+first_name,last_name,gender,prev_donor,occupation,ages,salary,donated,prediction
+Hobard,Huckle,1,0,Flight Attendant,39,44860,0,0.26
+Giuditta,Errowe,0,0,Surgeon,59,187500,1,0.25
+Mercie,Chippin,0,0,Bartender,45,19530,1,0.31
+Lorinda,Curnokk,0,0,Orthodontist,70,208000,0,0.25
+Roxane,Worman,0,1,Occupational Therapist,80,80150,0,0.25
+Ludvig,Hasson,1,1,Writer,79,60250,1,0.26
+Casar,Faltin,1,1,Cashier,42,19310,1,0.26
+Margarette,Bennet,0,0,Flight Attendant,71,44860,1,0.25
+Leda,Pollicott,0,0,Accountant,64,67190,0,0.25
+Tanner,Presswell,1,0,Marketing Manager,41,124850,1,0.26
+Valene,Bernaert,0,0,Driver,33,41260,1,0.12
+Theresina,Corby,0,0,Police Officer,65,60270,0,0.25
+Merl,Chidley,0,1,Physican,37,187200,0,0.12
+Doreen,Gaddes,0,1,Physican,26,187200,0,1.0
+Skippie,Mottershaw,1,1,Recruiter,56,61910,1,0.26
+Lyndsey,Brann,0,1,Flight Attendant,45,44860,1,0.31
+Gayelord,Solan,1,0,Farmer,58,64170,0,0.26
+Sidney,Yurocjkin,1,0,Physical Therapist,80,84020,1,0.26
+Fifi,Loxly,0,1,Chemical Engineer,24,97360,0,1.0
+Fancy,Doddridge,0,1,Security Guard,22,24680,0,1.0
+Diena,Kording,0,0,Data Scientist,59,113436,0,0.25
+Adah,Lescop,0,0,Security Guard,27,24680,0,1.0
+Hadrian,Salvadore,1,1,Risk Manager,54,125688,0,0.26
+Aretha,Grimsley,0,1,Occupational Therapist,75,80150,1,0.25
+Hyacinthia,Joreau,0,0,Secretary,25,36500,0,1.0
+Bearnard,Creak,1,1,Software Developer,22,79530,0,1.0
+Dun,Archley,1,0,Mechanical Engineer,47,83590,1,0.26
+Electra,Pinwill,0,0,Security Guard,23,24680,0,1.0
+Kirby,Neary,0,1,Physical Therapist,64,84020,1,0.25
+Tiffie,Belson,0,1,Farmer,43,64170,1,0.31
+Arel,Dominy,1,1,Professor,41,72470,1,0.26
+Stephanie,Arens,0,0,Actor,39,52000,1,0.12
+Hube,Artinstall,1,1,Paramedic,39,31980,0,0.26
+Taylor,Dressel,1,1,Cashier,21,19310,0,1.0
+Minnaminnie,Jakobssen,0,0,Physican,68,187200,1,0.25
+Timofei,Hyrons,1,1,Professor,41,72470,1,0.26
+Joelynn,Masham,0,0,Chef,26,41500,0,1.0
+Maje,Shankland,1,1,Driver,56,41260,1,0.26
+Jeddy,Mohring,1,0,Accountant,32,67190,1,0.41
+Reyna,Kay,0,0,Lawyer,74,115820,1,0.25
+Haydon,Belderfield,1,0,Orthodontist,83,208000,0,0.67
+Amerigo,Dixey,1,0,Teacher,79,58950,1,0.26
+Edgardo,Arthy,1,0,Flight Attendant,32,44860,0,0.41
+Reinwald,Coleford,1,0,Marketing Manager,35,124850,1,0.41
+Lawton,Govan,1,0,Doctor,76,187200,1,0.26
+Page,Nicholls,1,1,Occupational Therapist,47,80150,1,0.26
+Beth,Blacket,0,1,Physical Therapist,26,84020,0,1.0
+Devondra,Coggins,0,1,Soldier,33,33624,0,0.12
+Gabriella,Petren,0,1,Flight Attendant,47,44860,1,0.0
+Augusto,Tadlow,1,0,Physical Therapist,44,84020,1,0.26
+Adena,Hazel,0,1,Sales Manager,32,113860,1,0.12
+Carlo,Bakster,1,1,Paramedic,76,31980,0,0.26
+Nobie,Risebrow,1,0,Web Developer,78,64970,1,0.26
+Sunshine,Smallbone,0,0,Finance Manager,65,125080,0,0.25
+Norrie,Kynastone,0,1,Economist,75,99180,1,0.25
+Ruddy,Shirtcliffe,1,1,Soldier,77,33624,1,0.26
+Maible,Semmens,0,1,Web Developer,69,64970,1,0.25
+Welsh,Gaitone,1,0,Writer,45,60250,1,0.26
+Leola,Mallebone,0,0,Police Officer,31,60270,0,0.12
+Perrine,Ralton,0,1,Recruiter,66,61910,1,0.25
+Thornie,Hillett,1,1,Occupational Therapist,35,80150,0,0.41
+Stefania,Unsworth,0,0,Product Manager,46,120152,0,0.0
+Sheri,Ishak,0,1,Music Artist,44,32193,0,0.31
+Darrell,Broadbent,1,0,Software Developer,24,79530,0,1.0
+Roi,Boatswain,1,0,Lawyer,57,115820,1,0.26
+Aurie,Wrefford,0,0,Physican Assistant,85,98180,1,0.25
+Verena,Gill,0,1,Occupational Therapist,25,80150,0,1.0
+Torrey,Kaysor,1,1,Physican,43,187200,1,0.26
+Rice,Noli,1,0,Sales Manager,44,113860,1,0.26
+Mortie,Rooson,1,0,Bartender,35,19530,1,0.0
+Kendra,Fury,0,0,Tax Manager,63,120397,0,0.25
+Bianca,Simonds,0,1,Physican Assistant,68,98180,1,0.25
+Dora,Ponsford,0,0,Social Worker,76,45900,1,0.25
+Karim,Hubane,1,1,Music Artist,57,32193,1,0.26
+Nikolaus,De Souza,1,1,Pharmacist,47,115000,1,0.26
+Aguste,Whacket,1,0,Civil Engineer,42,82220,0,0.26
+Vernice,Vaggers,0,1,Driver,55,41260,0,0.25
+Gaston,Arnout,1,0,Civil Engineer,57,82220,0,0.26
+Danica,Keen,0,0,Product Manager,69,120152,0,0.25
+Cody,Theriot,1,0,Nurse,43,67490,1,0.26
+Mark,Crummie,1,0,Economist,35,99180,1,0.41
+Nicky,Schulter,1,1,Politician,57,174000,0,0.26
+Krisha,Dubois,1,0,Finance Manager,42,125080,1,0.26
+Duffie,Dunabie,1,1,Product Manager,66,120152,1,0.26
+Eba,Bertl,0,0,Web Developer,54,64970,0,0.05
+Sylvia,Punshon,0,0,Occupational Therapist,32,80150,1,0.12
+Wesley,Hadlington,1,0,Recruiter,85,61910,0,0.26
+Francklyn,Botte,1,1,Lawyer,78,115820,1,0.26
+Raoul,Christofle,1,1,Psychologist,80,72580,1,0.26
+Nicholas,Edsell,1,0,Physican Assistant,68,98180,1,0.26
+Sarita,Boyes,0,0,Professor,64,72470,1,0.25
+Lezley,Schulze,1,0,Sales Manager,74,113860,0,0.26
+Kizzee,Beevors,0,1,Driver,27,41260,0,1.0
+Julian,Willetts,1,1,Bartender,44,19530,0,0.26
+Gerrard,Benda,1,1,Product Manager,24,120152,0,1.0
+Jakie,Cuschieri,1,1,Pharmacist,49,115000,1,0.26
+Alfy,Tavner,1,0,Electrical Engineer,66,95230,1,0.26
+Adorne,Brandino,0,1,Mechanical Engineer,39,83590,1,0.12
+Sonni,Gaffon,0,0,Doctor,77,187200,1,0.25
+Eleanore,Fusco,0,0,Electrical Engineer,54,95230,1,0.05

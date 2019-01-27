@@ -2,10 +2,12 @@ from flask import Flask, request, jsonify
 import numpy as np
 import pandas as pd 
 import matplotlib as mpl
+import sklearn as skl
 
 import sys
 sys.path.append("..")
 from data.preprocess import Preprocessor
+from data.classifiers import ProbabilisticRegressor
 
 def create_app():
     app = Flask(__name__)
@@ -16,6 +18,15 @@ def create_app():
         df = preprocessor.generate_data()
         print(df.head())
         return jsonify(df.values.tolist())
+    
+    @app.route('/analyze')
+    def analyze_data():
+        pr = ProbabilisticRegressor()
+        pr.LogisticRegressor('./final_data.csv')
+        return jsonify(pd.read_csv('./output.csv').to_json(orient='records'))
+        
+
+
     
     return app
     

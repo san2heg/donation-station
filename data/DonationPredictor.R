@@ -49,7 +49,7 @@ Social_Worker <<- 45900
 Pharmacist <<- 115000
 
 #Import data
-data <- read.csv("md-haw.csv",header=T)
+data <- read.csv("../backend/processed_data.csv",header=T)
 id <- as.integer(data[[1]])
 first_name <- as.character(data[[2]])
 last_name <- as.character(data[[3]])
