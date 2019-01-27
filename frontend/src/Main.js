@@ -251,7 +251,51 @@ class Main extends React.Component {
       return this.dataPage()
     } else if (page == 'about') {
       return (
-        <div></div>
+        <div className='paragraph-box'>
+          <h1> About </h1>
+          <p>Donation Station aims to help Make-A-Wish easily and efficiently reach out to donor and volunteer prospects. The search for donors can be bolstered by the use of machine learning 
+            and data science, <span className="bold italic">but it doesn't have to be intimidating!</span> Donation Station is a simple, user friendly, and easy to use application that allows Make-A-Wish to quickly search for and
+            get in contact with prospective donors and volunteers. <span className="bold italic">We handle the technical stuff, you take care of the rest!</span></p>
+            
+          <p> When given simple data on prospective donors, Donation Station outputs likelihoods of the prospects to donate based on learned tendencies in training datasets. From the main data page,
+            it's easy to identify high-likelihood prospects and reach out immediately! In addition, our Insights platform allows for efficient identification of volunteers through similar means. </p>
+          
+          <h1> Methodology </h1>
+
+          <p> So how does the magic happen? </p>
+
+          <p> Donation Station operates with scalabality at its forefront. Behind a beautiful user interface is a data analysis engine that can accept data on an at-will basis in order to better 
+            learn who may be a match for Make-A-Wish. By learning both intrinsic and extrinsic correlations between prospective donor attributes and propensity to donate, Donation Station is able
+            to recommend smart decisions without much user guidance, so Make-A-Wish can focus on what really matters.
+          </p>
+
+          <h1>The Technical Stuff (bleh!)</h1>
+
+          <p>We made sure to really understand the domain of data that Make-A-Wish could acquire and utilize before getting down to the machine learning. We focused on attributes such as age, occupation, 
+            and previous donations (to name a few) to input to our models for prediction. The models we used are as follows:
+          </p>
+
+          <ul>
+            <li>Neural Networks</li>
+            <li>Decision Trees/Random Forests</li>
+            <li>Logistic Regression</li>
+            <li>K Nearest Neighbors (KNN)</li>
+          </ul>
+
+
+
+
+            
+           <p> Allowing the input of database csv files, which Make-A-Wish could data stores on previous donors and prospective donors, the Donation Station the Donation Station aims to bridge the gap between data analysis and is ineffective and We use several machine learning models, including Neural Networks,
+            Random Forest Classifiers, K-Nearest-Neighbors (KNN), and Logistic Regression. We take care of all the technical details, so it's easy for you to find prospective donors!
+
+            <br></br>
+            <br></br>
+            <hr></hr>
+
+            Made by Rajiv Anisetti, Sanketh Hegde, Raymond Kwan, Kareem Nosseir, and Ritesh Pendekanti at Hack-A-Wish 2019!
+          </p>
+        </div>
       );
     } else if (page == 'how to use') {
       return (
