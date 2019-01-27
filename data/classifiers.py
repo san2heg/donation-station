@@ -20,7 +20,9 @@ class ProbabilisticRegressor:
         end_df = starting_df.loc[900: 1000]
         end_df['prediction'] = np.round(y_pred[:, 1], decimals = 2)
         end_df.to_csv('output.csv', index = False)
-        print("RMSE: {}".format(self.getRMSE(y_pred[:, 1], starting_df.loc[900:1000]['donated'].values)))
+        mse = self.getRMSE(y_pred[:, 1], starting_df.loc[900:1000]['donated'].values)
+        print("MSE: {}".format(mse))
+        return mse
     
     def KNearestNeighborsClassifier(self, csv):
         X_train, X_test, y_train, y_test = self.preprocessData(csv)
@@ -31,7 +33,9 @@ class ProbabilisticRegressor:
         end_df = starting_df.loc[900: 1000]
         end_df['prediction'] = np.round(y_pred[:, 1], decimals = 2)
         end_df.to_csv('output.csv', index = False)
-        print("RMSE: {}".format(self.getRMSE(y_pred[:, 1], starting_df.loc[900:1000]['donated'].values)))
+        mse = self.getRMSE(y_pred[:, 1], starting_df.loc[900:1000]['donated'].values)
+        print("MSE: {}".format(mse))
+        return mse
     
     def NeuralNetworkClassifier(self, csv):
         X_train, X_test, y_train, y_test = self.preprocessData(csv)
@@ -42,7 +46,9 @@ class ProbabilisticRegressor:
         end_df = starting_df.loc[900: 1000]
         end_df['prediction'] = np.round(y_pred[:, 1], decimals = 2)
         end_df.to_csv('output.csv', index = False)
-        print("RMSE: {}".format(self.getRMSE(y_pred[:, 1], starting_df.loc[900:1000]['donated'].values)))
+        mse = self.getRMSE(y_pred[:, 1], starting_df.loc[900:1000]['donated'].values)
+        print("MSE: {}".format(mse))
+        return mse
     
     def LogisticRegressionClassifier(self, csv):
         X_train, X_test, y_train, y_test = self.preprocessData(csv)
@@ -53,7 +59,9 @@ class ProbabilisticRegressor:
         end_df = starting_df.loc[900: 1000]
         end_df['prediction'] = np.round(y_pred[:, 1], decimals = 2)
         end_df.to_csv('output.csv', index = False)
-        print("RMSE: {}".format(self.getRMSE(y_pred[:, 1], starting_df.loc[900:1000]['donated'].values)))
+        mse = self.getRMSE(y_pred[:, 1], starting_df.loc[900:1000]['donated'].values)
+        print("MSE: {}".format(mse))
+        return mse
 
     @staticmethod
     def getRMSE(y_pred, y):
