@@ -405,8 +405,9 @@ class Main extends React.Component {
               <h1>Insights Platform</h1>
 
 
-              <p>Our data analysis platform is designed to be extremely easy to use! Simply select a model (or default to Random Forest Classifier) and click <span className="bold italid"> Go!</span></p>
-              <p>From here, feel free to take a look at each of the prospective donors and use the <span className="italic bold"> Contact </span> button to reach out!</p>
+              <p>Our Insights Platform allows for more <span className="bold italic"> in-depth analysis</span> of the data points. Using Insights, it's<span className="bold italic"> easy to 
+              analyze</span> trends between user attributes and donations. </p>
+              <p>The Insights platform currently allows for analysis of previous donors and age with regard to donation propensity.</p>
             </div>
             <div class="column">
               <br></br><br></br>
