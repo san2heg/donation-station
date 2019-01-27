@@ -101,7 +101,7 @@ class Insights extends React.Component {
     let piechartOptions = {
       animationEasing : "easeOutQuad",
       segmentShowStroke : true,
-      segmentStrokeColor : "#F5F5F5"
+      segmentStrokeColor : "#f2f2f2"
     }
 
     return (
