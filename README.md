@@ -2,6 +2,8 @@
 
 Made by Rajiv Anisetti, Sanketh Hegde, Raymond Kwan, Kareem Nosseir, and Ritesh Pendekanti.
 
+###  Awarded Second Place at Hack-A-Wish 2019
+
 
 ## About
 Donation Station is an online platform built at Hack-A-Wish 2019 that enables the Make-A-Wish foundation to quickly and efficiently identify potential donors and volunteers.
@@ -26,3 +28,11 @@ Follow the steps below to get Donation Station up and running!
 
 ### Back-end
 `python3 ./app.py`
+
+
+## Screenshots
+![](https://i.imgur.com/NCggqOe.png)
+![](https://i.imgur.com/jttSBKB.png)
+![](https://i.imgur.com/GCktCmQ.png)
+![](https://i.imgur.com/DI5kUtv.png)
+![](https://i.imgur.com/aGGaJFu.png)
