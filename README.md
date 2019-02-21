@@ -1,6 +1,6 @@
-# Donation Station
+# Dono
 
-Made by Rajiv Anisetti, Sanketh Hegde, Raymond Kwan, Kareem Nosseir, and Ritesh Pendekanti.
+Made by Rajiv Anisetti, Sanketh Hegde, Raymond Kwan, Kareem Nosseir, and Ritesh Pendekanti. *Previously named Donation Station*
 
 ###  Awarded Second Place at Hack-A-Wish 2019
 
